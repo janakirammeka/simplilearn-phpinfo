@@ -15,3 +15,11 @@ spec:
       containers:
         - name: simplilearn-phpinfo-container
           image: index.docker.io/ramjmeka/caltech-phpinfo:latest
+          args:
+            - -f
+            - index.php
+            - -S
+            - 0.0.0.0:8080
+           command: 
+             - /usr/bin/php
+           workingDir: /src
